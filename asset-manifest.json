@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/labyrinth-game.git/static/css/main.3eab2f75.css",
-    "main.js": "/labyrinth-game.git/static/js/main.114a20b8.js",
-    "static/media/start.png": "/labyrinth-game.git/static/media/start.bf43944f27bdbb02a1d2.png",
-    "index.html": "/labyrinth-game.git/index.html",
-    "main.3eab2f75.css.map": "/labyrinth-game.git/static/css/main.3eab2f75.css.map",
-    "main.114a20b8.js.map": "/labyrinth-game.git/static/js/main.114a20b8.js.map"
+    "main.css": "/labyrinth-game/static/css/main.1c25ab68.css",
+    "main.js": "/labyrinth-game/static/js/main.114a20b8.js",
+    "static/media/start.png": "/labyrinth-game/static/media/start.bf43944f27bdbb02a1d2.png",
+    "index.html": "/labyrinth-game/index.html",
+    "main.1c25ab68.css.map": "/labyrinth-game/static/css/main.1c25ab68.css.map",
+    "main.114a20b8.js.map": "/labyrinth-game/static/js/main.114a20b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.3eab2f75.css",
+    "static/css/main.1c25ab68.css",
     "static/js/main.114a20b8.js"
   ]
 }
