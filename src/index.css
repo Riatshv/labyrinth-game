@@ -1,0 +1,245 @@
+html {
+  min-height: 100vh;
+}
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.boardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100px * 3 + 20px * 2);
+  justify-content: center;
+}
+
+.cell {
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: antiquewhite;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.cell:nth-child(3n+3) {
+  margin-right: 0px;
+}
+
+.active {
+  position: relative;
+}
+
+.active::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("./images/start.png");
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.hard::before {
+  animation: fadeOut 5s ;
+  opacity: 0%;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.gameProgressContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(50px*5 + 10px*4);
+}
+
+.gameProgressCell {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 50px;
+  background-color: bisque;
+  position: relative;
+}
+
+.gameProgressCellImg {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gameProgressCell:nth-child(5n+5) {
+  margin-right: 0px;
+}
+
+.correct {
+  background-color: green;
+}
+
+.answer {
+  background-color: rgb(226, 43, 43);
+}
+
+h2 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.chooseLevelContainer {
+  display: flex;
+  align-items: center;
+}
+
+.chooseLevelBtn {
+  margin-left: 10px;
+  display: block;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.chooseLevelBtn_easy {
+  background-color: rgba(0, 255, 255, 0.534);
+}
+
+.chooseLevelBtn_hard {
+  background-color: rgba(255, 0, 0, 0.514);
+}
+
+.activeBtn {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.levelTitle {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.modalOpened {
+  opacity: 0.5;
+  position: relative;
+}
+
+.modalOpened::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.modalWindow {
+  width: 100%;
+  background-color: rgba(0, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 2s
+}
+
+
+
+@keyframes slideUp {
+  0% {
+    height: 0%;
+
+  }
+  100% {
+    height: 50%;
+  }
+}
+
+.modalWindow p {
+  font-size: 20px;
+  width: 500px;
+  animation: slideUpText 2s;
+  text-align: center;
+}
+
+@keyframes slideUpText {
+  0% {
+    font-size: 10px;
+    width: 100%;
+
+  }
+  100% {
+    font-size: 20px;
+    width: 500px;
+  }
+}
+
+.rules__button {
+  margin-top: 30px;
+  font-size: 25px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 20px;
+  transition: background-color 0.5s;
+  border-radius: 20px;
+}
+
+.rules__button:hover {
+  background-color: wheat;
+}
+
+@media screen and (max-width: 520px) {
+  .modalWindow p {
+    font-size: 16px;
+    animation: slideUpTextMobile 2s;
+  }
+}
+
+@keyframes slideUpTextMobile {
+  0% {
+    font-size: 10px;
+    width: 100%;
+
+  }
+  100% {
+    font-size: 16px;
+    width: 500px;
+  }
+}
