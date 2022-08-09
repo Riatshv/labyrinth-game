@@ -71,21 +71,6 @@ code {
 }
 
 
-.hard::before {
-  animation: fadeOut 5s ;
-  opacity: 0%;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 100%;
-  }
-
-  100% {
-    opacity: 0%;
-  }
-}
-
 .gameProgressContainer {
   display: flex;
   flex-wrap: wrap;

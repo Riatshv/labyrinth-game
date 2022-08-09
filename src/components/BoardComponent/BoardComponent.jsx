@@ -15,7 +15,7 @@ export const BoardComponent = ({board, randomCell, isStarted, isEnded, correctCe
         } 
         return false;
     }
-    
+
     return (
         <>  
             {!isStarted && <ChooseLevel onChangeLevel={setLevel} level={level} board={board}></ChooseLevel>}
@@ -35,7 +35,6 @@ export const BoardComponent = ({board, randomCell, isStarted, isEnded, correctCe
                             answer1 = {!isCorrect && isCorrect!==null && correctCell.x === cell.x && correctCell.y === cell.y? "correct" : ""}
                             correctAnswer = {isCorrect && isCorrect!==null && isThisCell(cell.x, cell.y) ? "correct" : ""}
                             activeCell={randomCell?.x === cell.x && randomCell?.y === cell.y ? "active" : null}
-                            hardLevel = {board.chooseLevelTitle(level) === "Сложная" ? "hard" : ""}
                             clickOnCell = {isEnded && !isClicked ? board.clickOnCell : () => {}}
                             board={board}
                         />
